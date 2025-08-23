@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pandaTeste.api", "pandaTeste.api.csproj", "{23BBA197-F82D-470A-92FB-EB4096DBE288}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pandaTeste.test", "..\pandaTeste.test\pandaTeste.test.csproj", "{A0EDF79F-2B93-4FC6-9AE0-B4461E7C3A5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23BBA197-F82D-470A-92FB-EB4096DBE288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23BBA197-F82D-470A-92FB-EB4096DBE288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23BBA197-F82D-470A-92FB-EB4096DBE288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0EDF79F-2B93-4FC6-9AE0-B4461E7C3A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0EDF79F-2B93-4FC6-9AE0-B4461E7C3A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0EDF79F-2B93-4FC6-9AE0-B4461E7C3A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0EDF79F-2B93-4FC6-9AE0-B4461E7C3A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
