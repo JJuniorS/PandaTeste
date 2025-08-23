@@ -1,0 +1,6 @@
+@pandaTeste.api_HostAddress = http://localhost:5127
+
+GET {{pandaTeste.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

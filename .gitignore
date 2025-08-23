@@ -1,0 +1,13 @@
+# dotnet
+**/bin/
+**/obj/
+# node
+**/node_modules/
+**/dist/
+# playwright
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+# others
+.DS_Store
+**/.vs/
