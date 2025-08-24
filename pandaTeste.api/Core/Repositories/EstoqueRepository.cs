@@ -1,30 +1,57 @@
-﻿using pandaTeste.api.Domain.Entities;
+﻿using pandaTeste.api.Core.Interfaces;
+using pandaTeste.api.Domain.Entities;
 using pandaTeste.api.Infrastructure.Context;
 
 namespace pandaTeste.api.Core.Repositories
 {
-    public class EstoqueRepository
+    public class EstoqueRepository : IEstoqueRepository
     {
-        private readonly PandaDbContext _context;
-
-        public EstoqueRepository(PandaDbContext context)
+        private readonly List<Estoque> _dados = new();
+        public EstoqueRepository()
         {
-            _context = context;
-        }
-
-        public async Task AdicionarItemEstoque(EstoqueItem item)
-        {
-            _context.EstoqueItens.Add(item);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task EntregarItemEstoque(int estoqueId, int quantidade)
-        {
-            var estoque = await _context.Estoques.FindAsync(estoqueId);
-            if (estoque != null)
+            // Dados iniciais para testes
+            _dados = new List<Estoque>
             {
-                estoque.QuantidadeEstoque -= quantidade;
-                await _context.SaveChangesAsync();
+                new Estoque
+                {
+                    Id = 1,
+                    QuantidadeEstoque = 50,
+                    EstoqueItemId = 1,
+                    EstoqueItem = new EstoqueItem { Id = 1, Nome = "Teclado Mecânico" }
+                },
+                new Estoque
+                {
+                    Id = 2,
+                    QuantidadeEstoque = 20,
+                    EstoqueItemId = 2,
+                    EstoqueItem = new EstoqueItem { Id = 2, Nome = "Mouse Gamer" }
+                },
+                new Estoque
+                {
+                    Id = 3,
+                    QuantidadeEstoque = 10,
+                    EstoqueItemId = 3,
+                    EstoqueItem = new EstoqueItem { Id = 3, Nome = "Monitor 27''" }
+                }
+            };
+        }
+        public void Adicionar(Estoque estoque)
+        {
+            estoque.Id = _dados.Any() ? _dados.Max(e => e.Id) + 1 : 1;
+            _dados.Add(estoque);
+        }
+
+        public Estoque ObterPorItemId(int itemId)
+        {
+            return _dados.FirstOrDefault(e => e.EstoqueItemId == itemId);
+        }
+
+        public void Atualizar(Estoque estoque)
+        {
+            var exist = _dados.FirstOrDefault(e => e.Id == estoque.Id);
+            if (exist != null)
+            {
+                exist.QuantidadeEstoque = estoque.QuantidadeEstoque;
             }
         }
     }
