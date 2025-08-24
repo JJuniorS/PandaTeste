@@ -1,4 +1,4 @@
-﻿using pandaTeste.api.Dtos;
+﻿using pandaTeste.api.Domain.Entities;
 
 namespace pandaTeste.api.Core.Interfaces
 {

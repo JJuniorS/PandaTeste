@@ -1,5 +1,5 @@
 ﻿using pandaTeste.api.Core.Interfaces;
-using pandaTeste.api.Dtos;
+using pandaTeste.api.Domain.Entities;
 
 namespace pandaTeste.api.Core.Repositories
 {

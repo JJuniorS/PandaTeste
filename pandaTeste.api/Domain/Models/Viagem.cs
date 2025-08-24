@@ -1,4 +1,4 @@
-﻿namespace pandaTeste.api.Dtos
+﻿namespace pandaTeste.api.Domain.Entities
 {
     public class Viagem
     {

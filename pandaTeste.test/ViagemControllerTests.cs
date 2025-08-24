@@ -2,7 +2,7 @@
 using Moq;
 using pandaTeste.api.Application.Interfaces;
 using pandaTeste.api.Controllers;
-using pandaTeste.api.Dtos;
+using pandaTeste.api.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
