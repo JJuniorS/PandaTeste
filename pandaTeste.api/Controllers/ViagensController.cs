@@ -1,14 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using pandaTeste.api.Application.Interfaces;
+using pandaTeste.api.Dtos;
 
 namespace pandaTeste.api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ViagensController : Controller
+    public class ViagensController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IViagemService _viagemService;
+        public ViagensController(IViagemService viagemService)
         {
-            return View();
+            _viagemService = viagemService;
+        }
+
+        public ViagensController()
+        {
+
+        }
+
+        [HttpGet(Name = "GetViagens")]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var viagens = await _viagemService.ObterViagensAgendadasAsync();
+                return Ok(viagens);
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
     }
+
 }
