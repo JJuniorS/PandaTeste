@@ -8,12 +8,12 @@ namespace pandaTeste.api.Infrastructure.Mappings
     {
         public void Configure(EntityTypeBuilder<EstoqueItem> builder)
         {
-            builder.ToTable("EstoqueItens");
-            builder.HasKey(ei => ei.Id);
-            builder.Property(ei => ei.Nome).IsRequired().HasMaxLength(255);
-            builder.HasMany(ei => ei.Estoques)
-                   .WithOne(e => e.EstoqueItem)
-                   .HasForeignKey(e => e.EstoqueItemId);
+            //builder.ToTable("EstoqueItens");
+            //builder.HasKey(ei => ei.Id);
+            //builder.Property(ei => ei.Nome).IsRequired().HasMaxLength(255);
+            //builder.HasMany(ei => ei.Estoques)
+            //       .WithOne(e => e.EstoqueItem)
+            //       .HasForeignKey(e => e.EstoqueItemId);
         }
     }
 }

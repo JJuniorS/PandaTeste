@@ -3,11 +3,6 @@ using Moq;
 using pandaTeste.api.Application.Interfaces;
 using pandaTeste.api.Controllers;
 using pandaTeste.api.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pandaTeste.test
 {

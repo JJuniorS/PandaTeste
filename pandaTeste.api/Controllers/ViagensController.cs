@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pandaTeste.api.Application.Interfaces;
-using pandaTeste.api.Dtos;
 
 namespace pandaTeste.api.Controllers
 {
