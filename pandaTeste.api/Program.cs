@@ -21,6 +21,9 @@ builder.Services.AddScoped<IViagemRepository, ViagemRepository>();
 builder.Services.AddScoped<IEstoqueService, EstoqueService>();
 builder.Services.AddSingleton<IEstoqueRepository, EstoqueRepository>();
 
+builder.Services.AddScoped<IFinanceiroRepository, FinanceiroRepository>();
+builder.Services.AddScoped<IFinanceiroService, FinanceiroService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
